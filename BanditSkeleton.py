@@ -43,11 +43,11 @@ class BanditSet(object):
         self.Names         = ArmNames
 
         # Store a list for the weights.
-        self.Weights       = [-1 for I in len(ArmNames)]
+        self.Weights       = [-1 for I in range(len(ArmNames))]
 
         # Calculate the starting probability and add it.
         StartProb = 1 / float(len(ArmNames))
-        self.Probabilities = [StartProb for I in len(ArmNames)]
+        self.Probabilities = [StartProb for I in range(len(ArmNames))]
 
         # And store the Cumulative Reward
         self.CumulativeReward = 0
